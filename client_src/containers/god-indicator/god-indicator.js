@@ -11,10 +11,8 @@ module.exports = function GodIndicator(options) {
 	});
 
 	function render() {
-		var attitudeName = (indicatorModel.getCount() > 0) ? 'hate' : 'love';
 		elem.html(App.templates['god-indicator']({
-			indicatorName: options.name,
-			attitudeName: attitudeName
+			indicatorName: options.name
 		}));
 
 		elem.find('.god-indicator__bar').html(bar.render().elem);
